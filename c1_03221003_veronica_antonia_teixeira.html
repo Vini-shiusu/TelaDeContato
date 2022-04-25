@@ -1,0 +1,38 @@
+<!--Crie uma página HTML que simule uma calculadora de décimo terceiro da seguinte forma:
+a)Tenha o seguinte conteúdo:
+a.1) Solicite o nome do usuário
+a.2) Solicite o valor do sálario
+a.3) Solicite o total de meses que a pessoa trabalhou
+a.4) Tenha um botão "Simular
+
+b)Ao clicar no botão descrito em a), deve aparecer uma mensagem na própria página com a mensagem "Olá, X, você trabalhou por Y meses então o seu Décimo terceiro será de Z,
+onde X é o nome informado, Y é o tempo informado e o Y é o cálculo do décimo terceiro"
+
+c) Crie um diagrama de atividade que descreva com clareza o programa.-->
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação continuada</title>
+</head>
+<body>
+    <h3 style="color:blue">Calculadora de Décimo Terceiro</h3>
+    Informe o seu nome: <input  id="nome"><br>
+    Informe o seu salário: <input id="salario"><br>
+    Informe o total de meses que você trabalhou: <input  id="meses"><br>
+    <br> <button onclick="calcular()">Simular</button><br>
+    <p id="p_resultado"></p>
+</body>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        p_resultado.innerHTML = `Olá ${nome.value} você trabalhou por ${meses.value} meses então o seu décimo terceiro será de R$ ${((Number(salario.value) / 12) * Number(meses.value))}`
+    }
+</script>
+
